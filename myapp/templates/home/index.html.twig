@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste{% endblock %}
+
+{% block body %}
+<a href="{{path('app_create')  }}">
+    <button type="button" class="btn btn-primary">Ajouter</button>
+</a>
+<table>
+    <thead>
+        <tr>
+            <td>Nom</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for liste in listes %}
+            <tr>
+                <td>{{ liste.name }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

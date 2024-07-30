@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Create{% endblock %}
+
+{% block body %}
+<form action="{{ path('app_create') }}" method="POST">
+    <input type="text" name="name" required class="form-control">
+    <input type="submit" value="Envoyer" class="btn btn-success">
+</form>
+<a href="{{path('app_home')  }}">
+    <button type="button" class="btn btn-outline-primary">Retour</button>
+</a>
+{% endblock %}
